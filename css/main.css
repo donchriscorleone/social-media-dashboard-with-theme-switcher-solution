@@ -238,10 +238,28 @@ input:checked + .slider:before {
 
 body {
   padding: 30px 20px;
+  position: relative;
 }
 
 body.dark {
   background-color: #1e202a;
+}
+
+footer {
+  position: absolute;
+  bottom: 2px;
+  text-align: center;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+footer a {
+  text-decoration: none;
+  color: #ccc;
+  transition: all 0.4s;
+}
+footer a:hover {
+  color: #aaa;
 }
 
 .main {

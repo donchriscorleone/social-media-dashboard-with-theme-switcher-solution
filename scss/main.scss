@@ -12,10 +12,30 @@
 
 body {
     padding: 30px 20px;
+    position: relative;
 }
 
 body.dark {
     background-color: $dark-very-dark-blue-1;
+}
+
+footer {
+    position: absolute;
+    bottom: 2px;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+
+    a {
+        text-decoration: none;
+        color: #ccc;
+        transition: all .4s;
+
+        &:hover {
+            color: #aaa;
+        }
+    }
 }
 
 .main {
