@@ -1,0 +1,52 @@
+@import './variables.scss';
+
+.card-overview {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    row-gap: 30px;
+}
+
+.card-overview-header, .card-overview-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-overview-header {
+    .overview-title {
+        font-size: 1rem;
+        color: $light-dark-grayish-blue;
+    }
+}
+
+.card-overview-body {
+    .overview-count {
+        color: $light-very-dark-blue;
+        font-weight: 700;
+        font-size: 2.3rem;
+    }
+}
+
+.card-overview.dark {
+    background-color: $dark-dark-desaturated-blue;
+
+    .overview-title {
+        color: $dark-desaturated-blue;
+    }
+
+    .card-overview-body {
+        .overview-count {
+            color: $dark-white;
+        }
+    }
+}
+
+.card-overview.card-downrate {
+    .social-media-latest-count {
+        .social-media-latest-count-text {
+            color: $bright-red;
+        }
+    }
+}

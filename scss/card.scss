@@ -1,0 +1,159 @@
+@import './variables.scss';
+
+.card {
+    border-radius: 7px;
+    background-color: $light-very-pale-blue;
+    width: 100%;
+    max-width: 350px;
+    padding: 0 20px;
+    transition: all .3s;
+
+    &:hover {
+        cursor: pointer;
+        opacity: .75;
+    }
+}
+
+.dark.card {
+    &:hover {
+        opacity: .86;
+    }
+}
+
+.card-social-media {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+
+
+    .social-media-header {
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+
+        .social-media-username {
+            font-weight: 700;
+            color: $light-dark-grayish-blue;
+            font-size: .8rem;
+        }
+    }
+
+    .social-media-count-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
+        text-align: center;
+
+        .social-media-count {
+            font-size: 3.5rem;
+        }
+
+        .social-media-follower {
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: $light-dark-grayish-blue;
+        }
+    }
+}
+
+.dark.card-social-media {
+    background-color: $dark-dark-desaturated-blue;
+
+    .social-media-header {
+        .social-media-username {
+            color: $light-dark-grayish-blue;
+        }
+    }
+
+    .social-media-count-container {
+        .social-media-count {
+            color: $dark-white;
+        }
+
+        .social-media-follower {
+            color: $light-dark-grayish-blue;
+        }
+    }
+}
+
+.social-media-latest-count {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+
+    .social-media-latest-count-text {
+        color: $lime-green;
+        font-size: .75rem;
+        font-weight: 700;
+    }
+}
+
+.card-social-media.facebook {
+    border-top: 5px solid $facebook;
+}
+
+.card-social-media.twitter {
+    border-top: 5px solid $twitter;
+}
+
+.card-social-media.instagram {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        background: $instagram;
+        top: 0px;
+        left: 0;
+        border-radius: 0 5px;
+    }
+}
+
+.card-social-media.youtube {
+    border-top: 5px solid $youtube;
+}
+
+.card-dark.card-social-media {
+    background-color: $dark-dark-desaturated-blue;
+
+    .social-media-header {
+        .social-media-username {
+            color: $light-dark-grayish-blue;
+        }
+    }
+
+    .social-media-count-container {
+        .social-media-count {
+            color: $dark-white;
+        }
+    }
+}
+
+.card-dark.card-social-media.facebook {
+    .social-media-latest-count {
+        .social-media-latest-count-text {
+            color: $dark-desaturated-blue;
+        }
+    }
+}
+
+.card-dark.card-social-media.youtube {
+    .social-media-latest-count {
+        .social-media-latest-count-text {
+            color: $youtube;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .card-social-media {
+        row-gap: 10px;
+    }
+}
